@@ -3,22 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather App</title>
+    <title>Weather Forecast</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="https://openweathermap.org/img/wn/02d.png" type="image/png">
 </head>
 <body>
     <div id="weather-container">
-        <h2>Weather App</h2>
-        <input type="text" id="city" placeholder="Enter city">
-        <button onclick="getWeather()">Search</button>
+        <h2><i class="fas fa-cloud-sun"></i> Weather Forecast</h2>
+        
+        <div class="search-box">
+            <input type="text" id="city" placeholder="Enter city name...">
+            <button onclick="getWeather()"><i class="fas fa-search"></i></button>
+        </div>
 
-        <img id="weather-icon" alt="Weather Icon">
+        <div class="current-weather">
+            <img id="weather-icon" alt="Weather Icon">
+            <div id="temp-div"></div>
+            <div id="weather-info"></div>
+        </div>
 
-        <div id="temp-div"></div>
-
-        <div id="weather-info"></div>
-
-        <div id="hourly-forecast"></div>
+        <div class="divider"></div>
+        
+        <div class="forecast-section">
+            <p class="forecast-heading">Hourly Forecast</p>
+            <div id="hourly-forecast"></div>
+        </div>
     </div>
     <script src="./script.js"></script>
 </body>
