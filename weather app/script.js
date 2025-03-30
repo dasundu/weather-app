@@ -15,7 +15,7 @@ document.getElementById('city').addEventListener('keypress', (event) => {
 });
 
 function getWeather() {
-    const apiKey = '4f8add8edf87a7007fbac3d2409cd86f';
+    const apiKey = 'YOUR_API_KEY_HERE'; // Replace with your OpenWeatherMap API key
     const city = document.getElementById('city').value.trim();
 
     if (!city) {
